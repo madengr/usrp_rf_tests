@@ -13,8 +13,9 @@ Features:
 - Tone and IMD3 measurements with 8566B spectrum analyzer
 - Instrument control via Linux GPIB (http://linux-gpib.sourceforge.net/)
 
-Tested Hardware:
-- Ettus Research B200 (https://www.ettus.com)
+Tested with:
+- Ettus Research B200 (http://www.ettus.com)
+- GNU Radio 3.7.5 (https://github.com/gnuradio/gnuradio)
 
 ![Alt text](https://github.com/madengr/usrp_rf_tests/blob/master/apps/usrp_one_tone_tx_power_graph.png)
 
