@@ -10,7 +10,8 @@ Homepage: https://github.com/madengr/usrp_rf_tests
 Features:
 - One tone transmit test over swept frequency and gain. 
 - Two tone transmit test over swept frequency and gain.
-- Tone and IMD3 measurements with 8566B spectrum analyzer via Linux GPIB
+- Tone and IMD3 measurements with 8566B spectrum analyzer
+- Instrument control via Linux GPIB (http://linux-gpib.sourceforge.net/)
 
 Tested Hardware:
 - Ettus Research B200 (https://www.ettus.com)
