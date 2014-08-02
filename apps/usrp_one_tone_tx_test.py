@@ -120,7 +120,7 @@ def main():
     plt.xlabel('Gain (dB)')
     plt.ylabel('Power (dBm)')
     plt.grid()
-    plt.title("B200 Single Tone TX Test over Frequency and Gain")
+    plt.title("B200 One Tone TX Test over Frequency and Gain")
     plt.suptitle("%1.3f Tone Amplitude @ %i kHz Offset" % \
         (tb.sig_amp, tb.sig0_freq/1E3))
     plt.savefig('usrp_one_tone_tx_power_graph.png')
