@@ -15,8 +15,8 @@ Features:
 Tested Hardware:
 - Ettus Research B200 (https://www.ettus.com)
 
-![Alt text](https://raw.github.com/madengr/usrp_rf_tests/blob/master/apps/usrp_one_tone_tx_power_graph.png)
+![Alt text](https://github.com/madengr/usrp_rf_tests/blob/master/apps/usrp_one_tone_tx_power_graph.png)
 
-![Alt text](https://raw.github.com/madengr/usrp_rf_tests/blob/master/apps/usrp_two_tone_tx_power_graph.png)
+![Alt text](https://github.com/madengr/usrp_rf_tests/blob/master/apps/usrp_two_tone_tx_power_graph.png)
 
-![Alt text](https://raw.github.com/madengr/usrp_rf_tests/blob/master/apps/usrp_two_tone_tx_imd3_graph.png)
+![Alt text](https://github.com/madengr/usrp_rf_tests/blob/master/apps/usrp_two_tone_tx_imd3_graph.png)
