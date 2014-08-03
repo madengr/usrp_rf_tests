@@ -14,10 +14,11 @@ Features:
 - Instrument control via Linux GPIB (http://linux-gpib.sourceforge.net/)
 
 Tested with:
-- Ettus Research B200 (http://www.ettus.com)
+- Ettus B200 (http://www.ettus.com)
+- Ettus UHD 3.7.2 (https://github.com/EttusResearch/uhd)
 - GNU Radio 3.7.5 (https://github.com/gnuradio/gnuradio)
 
-The purpose of these tests is to generate graphs for setting the TX and RX gain of the USRP.  They also serve as an experiment to mix the GNU Radio flow with real-time measurements via GPIB.
+The purpose of these tests is to generate graphs for setting the TX and RX gain of the USRP.  They also serve as an experiment to mix the GNU Radio flow with real-time measurements via GPIB.  Note the USRP should be locked to the 10 MHz reference of the spectrum analyzer.  
 
 The one tone TX test consists of a 0.707 amplitude tone at 100 kHz offset from the center frequency.  The tone amplitude is -3 dBFS, which is half power from full scale of the DAC.  The center frequency and hardware gain are swept while recording the tone power on the spectrum analyzer.  The resulting graph may be used to choose a gain setting for desired output power while avoiding gain compression. 
 
