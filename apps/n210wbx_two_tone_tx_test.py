@@ -25,10 +25,10 @@ class MyTopBlock(gr.top_block):
 
         # Default constants
         # Each tone amplitude is -9 dBFS, for a combined peak of -3 dBFS
-        uhd_args = "type=b200"
+        uhd_args = "addr=192.168.1.13"
         self.sample_rate = 250E3
-        self.center_freq = 3E9
-        self.gain = 60
+        self.center_freq = 1E9
+        self.gain = 15
         self.sig0_freq = 50E3
         self.sig1_freq = 75E3
         self.sig_amp = 1/(2*np.sqrt(2))
@@ -72,24 +72,24 @@ def main():
 
     # Setup the spectrum analyzer
     specan.preset()
-    specan.set_ref_level(30)
+    specan.set_ref_level(20)
     specan.set_span(tb.sample_rate)
-    specan.set_rbw(3000)
-    specan.set_vbw(1000)
+    specan.set_rbw(1000)
+    specan.set_vbw(100)
 
     # Create a list of center frequencies and append some more
-    center_freq_list = [100E6, 500E6, 1E9]
-    center_freq_start = 2E9
-    center_freq_stop = 6E9
-    center_freq_step = 2E9
+    center_freq_list = [50E6, 100E6]
+    center_freq_start = 500E6
+    center_freq_stop = 2E9
+    center_freq_step = 500E6
     center_freq = center_freq_start
     while center_freq <= center_freq_stop:
         center_freq_list.append(center_freq)
         center_freq = center_freq + center_freq_step
 
     # Create a list of gains
-    gain_start = 70
-    gain_stop = 89
+    gain_start = 0
+    gain_stop = 31
     gain_step = 1.0
     gain_list = []
     gain = gain_start
@@ -141,11 +141,11 @@ def main():
     plt.xlabel('Gain (dB)')
     plt.ylabel('Single Tone Power (dBm)')
     plt.grid()
-    plt.title("B200 Two Tone TX Test over Frequency and Gain")
+    plt.title("N210+WBX Two Tone TX Test over Frequency and Gain")
     plt.suptitle("%1.3f Tone Amplitudes @ %i kHz Offset @ %i kHz Spacing" % \
         (tb.sig_amp, (tb.sig1_freq + tb.sig0_freq)/2E3, \
         (tb.sig1_freq - tb.sig0_freq)/1E3))
-    plt.savefig('usrp_two_tone_tx_power_graph.png')
+    plt.savefig('n210wbx_two_tone_tx_power_graph.png')
     plt.show()
 
     # Plot the IMD3 level
@@ -157,11 +157,11 @@ def main():
     plt.xlabel('Gain (dB)')
     plt.ylabel('IMD3 (dBc)')
     plt.grid()
-    plt.title("B200 Two Tone TX Test over Frequency and Gain")
+    plt.title("N210+WBX Two Tone TX Test over Frequency and Gain")
     plt.suptitle("%1.3f Tone Amplitudes @ %i kHz Offset @ %i kHz Spacing" % \
         (tb.sig_amp, (tb.sig1_freq + tb.sig0_freq)/2E3, \
         (tb.sig1_freq - tb.sig0_freq)/1E3))
-    plt.savefig('usrp_two_tone_tx_imd3_graph.png')
+    plt.savefig('n210wbx_two_tone_tx_imd3_graph.png')
     plt.show()
 
 if __name__ == '__main__':
