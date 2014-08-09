@@ -31,9 +31,9 @@ The two tone TX test consists of 0.304 amplitude tones with 25 kHz spacing, offs
 ![b200_two_tone_tx_imd3_graph](https://github.com/madengr/usrp_rf_tests/blob/master/apps/b200_two_tone_tx_imd3_graph.png)
 
 Note the calibration routines should be run for the N210+WBX:
-uhd_cal_rx_iq_balance
-uhd_cal_tx_dc_offset
-uhd_cal_tx_iq_balance
+- uhd_cal_rx_iq_balance
+- uhd_cal_tx_dc_offset
+- uhd_cal_tx_iq_balance
 
 ![n210wbx_one_tone_tx_power_graph](https://github.com/madengr/usrp_rf_tests/blob/master/apps/n210wbx_one_tone_tx_power_graph.png)
 
